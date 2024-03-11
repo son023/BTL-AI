@@ -16,49 +16,71 @@ class MyWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self.central_widget)
         self.layout = QtWidgets.QVBoxLayout()
         self.layout1 = QtWidgets.QHBoxLayout()
-    
         
         
         self.title_label = QtWidgets.QLabel("NHẬN DIỆN CHÓ MÈO")
         self.title_label.setFixedSize(395, 50)
-        self.title_label.setStyleSheet("color: white;background-color: #000;margin-left: 120px;")
-        font = QtGui.QFont("Roboto", 14)
+        title_label_style = """
+            color: white;
+            background-color: white;
+            margin-left: 120px;
+            background-image: url(hinh1.png);
+        """
+        self.title_label.setStyleSheet(title_label_style)
+        font = QtGui.QFont("roboto", 14)
         font.setBold(True)
         self.title_label.setFont(font)
         self.layout.addWidget(self.title_label)
         self.central_widget.setLayout(self.layout)
-        self.central_widget.setStyleSheet("border: 2px solid black;border-radius: 10px;")
         
         self.image_label = QtWidgets.QLabel()
         self.layout.addWidget(self.image_label)
+        self.image_label.setStyleSheet(
+           """ background-color:white;
+           """  
+        )
        
 
         self.prediction_label = QtWidgets.QLabel()
         self.layout.addWidget(self.prediction_label)
-        font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setFamily("roboto")
-        self.prediction_label.setFont(font)
+        self.prediction_label.setStyleSheet(
+           """ 
+           background-color:white;
+           font-family:times;
+           font-size: 25px;
+           """ 
+        )
         
        
 
         self.file_dialog_button = QtWidgets.QPushButton("Chọn ảnh")
         self.file_dialog_button.setStyleSheet("""
-            background-color: #000;
-            color: #ffffff;
-            font-size: 20px;
-            border-radius: 10px;
-            border: 2px solid #000;
+            QPushButton {
+                background-color:#333333;
+                color: white;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+
+            QPushButton:hover {
+                background-color: #5b5a5a;
+            }
             
         """)
         
         self.file_dialog_button2 = QtWidgets.QPushButton("Dự đoán")
         self.file_dialog_button2.setStyleSheet("""
-            background-color: #000;
-            color: #ffffff;
-            font-size: 20px;
-            border-radius: 10px;
-            border: 2px solid #000;
+            QPushButton {
+                background-color:#333333;
+                color: white;
+                font-size: 16px;
+                font-family: roboto;
+                border-radius: 10px;
+            }
+
+            QPushButton:hover {
+                background-color: #5b5a5a;
+            }
         """)
         self.file_dialog_button.setFixedSize(100, 50)
         self.file_dialog_button2.setFixedSize(100, 50)
@@ -69,6 +91,7 @@ class MyWindow(QtWidgets.QMainWindow):
         self.layout1.addWidget(self.file_dialog_button)
         self.layout1.addWidget(self.file_dialog_button2)
         self.layout.addLayout(self.layout1)
+        self.central_widget.setStyleSheet("border: 2px solid black;border-radius: 10px;")
         
     def nhandien(self):
        if self.filename:
