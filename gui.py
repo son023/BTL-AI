@@ -35,7 +35,7 @@ class MyWindow(QMainWindow):
             background-image: url(hinh1.png);
         """
         title_label_style_2 = """
-            background-color: black; 
+            background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:1 #ffffff,  stop:0 #000000);
             color: white;
             margin-left: 40px;
            
@@ -66,31 +66,31 @@ class MyWindow(QMainWindow):
         self.title_label1.setFont(font)
         self.layout10.addWidget(self.title_label1,0,0)
         
-        self.title_label = QLabel("LÊ ĐÌNH PHÚC          B21DCCN593")
+        self.title_label = QLabel("Lê Đình Phúc          B21DCCN593")
         self.title_label.setFixedSize(480, 50)
         self.title_label.setStyleSheet(title_label_style_2)
         self.title_label.setFont(font)
         self.layout10.addWidget(self.title_label,1,0)
         
-        self.title_label = QLabel("NGUYỄN VĂN HẠNH B21DCCN329")
+        self.title_label = QLabel("Nguyễn Văn Hạnh  B21DCCN329")
         self.title_label.setFixedSize(480, 50)
         self.title_label.setStyleSheet(title_label_style_2)
         self.title_label.setFont(font)
         self.layout10.addWidget(self.title_label,2,0)
         
-        self.title_label = QLabel("ĐÀO HẢI ĐĂNG         B21DCCN197")
+        self.title_label = QLabel("Đào Hải Đăng         B21DCCN197")
         self.title_label.setFixedSize(480, 50)
         self.title_label.setStyleSheet(title_label_style_2)
         self.title_label.setFont(font)
         self.layout10.addWidget(self.title_label,3,0)
         
-        self.title_label = QLabel("TRẦN DUY LONG       B21DCCN501")
+        self.title_label = QLabel("Trần Duy Long        B21DCCN501")
         self.title_label.setFixedSize(480, 50)
         self.title_label.setStyleSheet(title_label_style_2)
         self.title_label.setFont(font)
         self.layout10.addWidget(self.title_label,4,0)
         
-        self.title_label = QLabel("NGUYỄN VĂN SƠN    B21DCCN653")
+        self.title_label = QLabel("Nguyễn Văn Sơn     B21DCCN653")
         self.title_label.setFixedSize(480, 50)
         self.title_label.setStyleSheet(title_label_style_2)
         self.title_label.setFont(font)
