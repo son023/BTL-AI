@@ -38,6 +38,7 @@ class MyWindow(QMainWindow):
             background-color: black; 
             color: white;
             margin-left: 40px;
+           
             text-align: center;
         """
         button_style="""
@@ -45,7 +46,7 @@ class MyWindow(QMainWindow):
                 background-color:#000;
                 color: white;
                 font-size: 16px;
-                border-radius: 15px;
+                border-radius: 20px;
         
             }
             QPushButton:hover {
