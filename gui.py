@@ -35,7 +35,7 @@ class MyWindow(QMainWindow):
             background-image: url(hinh1.png);
         """
         title_label_style_2 = """
-            background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:1 #ffffff,  stop:0 #000000);
+            background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:1 #ffffff, stop: 0.5 #000000 stop:0 #000000);
             color: white;
             margin-left: 40px;
            
