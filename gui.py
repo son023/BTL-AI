@@ -167,6 +167,7 @@ class MyWindow(QMainWindow):
         
         self.layout20.addLayout(self.layout21)
         
+        
     def nhan_dien(self):
        if self.filename:
             path=self.filename[0]
@@ -181,11 +182,17 @@ class MyWindow(QMainWindow):
             tile="{:.2f}".format(tile*100)+"%"
             self.prediction_label.setText("Dự đoán hình ảnh: " + class_name + "\nXác xuất chính xác: " +tile)    
     def open_file_dialog(self):
+        self.prediction_label.setText("")
         self.filename= QtWidgets.QFileDialog.getOpenFileName(self, "Select Image", "", "Image Files (*.jpg *.jpeg *.png)")
         if self.filename:
             path=self.filename[0]
             image_pixmap = QtGui.QPixmap(path)   
             self.image_label.setPixmap(image_pixmap)
+            self.image_label.setScaledContents(True)
+            
+        else:
+            pass
+            
     def on_button_clicked(self):
             self.stacked_widget.setCurrentIndex(1)
     def on_button_clicked_back(self):
