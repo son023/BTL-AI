@@ -21,7 +21,7 @@ class MyWindow(QMainWindow):
         self.widget2 = QWidget()
         self.stacked_widget.addWidget(self.widget1)
         self.stacked_widget.addWidget(self.widget2)
-        self.stacked_widget.setStyleSheet("border: 2px  solid black ;border-radius: 10px;background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #000000,  stop:1 #ffffff);")
+        self.stacked_widget.setStyleSheet("border: 2px  solid black ;border-radius: 10px;background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0  #FFC0CB,  stop:1 #ffffff);")
         
         self.layout_main = QVBoxLayout()
         self.layout_main.addWidget(self.stacked_widget)
